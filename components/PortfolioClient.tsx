@@ -168,7 +168,7 @@ function Navbar({
           <span className="grid h-10 w-10 place-items-center rounded-2xl bg-zinc-950 text-sm font-bold text-white shadow-glow dark:bg-gradient-to-br dark:from-gold dark:to-aqua dark:text-ink">
             S
           </span>
-          <span className="font-display text-lg font-semibold tracking-tight">Shubham</span>
+          <span className="font-display text-lg font-semibold tracking-tight">Shubham Sahu</span>
         </a>
         <div className="hidden items-center gap-1 rounded-full border border-white/10 bg-zinc-950/5 p-1 shadow-premium backdrop-blur dark:bg-white/[0.045] lg:flex">
           {navItems.map((item) => {
