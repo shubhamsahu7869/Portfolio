@@ -63,7 +63,7 @@ export const projects = [
     imageTone: "from-gold/25 via-aqua/20 to-violet/20",
     tech: ["MERN Stack", "OpenRouter API", "JWT", "MongoDB", "Tailwind CSS"],
     github: "https://github.com/shubhamsahu7869/PlanMyYatra",
-    demo: null,
+    demo: "https://planmyyatra-travel-planner.vercel.app/",
     highlights: ["AI itinerary generation", "Trip management", "OpenRouter API", "Budget planning"]
   },
   {
@@ -125,18 +125,6 @@ export const projects = [
     github: "https://github.com/shubhamsahu7869/Frontend-Task",
     demo: "https://frontend-task-virid-rho.vercel.app",
     highlights: ["Live Vercel deploy", "Frontend task", "Responsive UI", "Clean components"]
-  },
-  {
-    title: "MyBook App",
-    category: "Full Stack",
-    description:
-      "Book-focused web application from Shubham's GitHub portfolio, included as part of the public project showcase.",
-    image: "/projects/mybookapp.png",
-    imageTone: "from-white/15 via-gold/20 to-aqua/20",
-    tech: ["JavaScript", "Web App", "GitHub"],
-    github: "https://github.com/shubhamsahu7869/mybookapp",
-    demo: null,
-    highlights: ["Book app", "Clean interface", "Portfolio project"]
   }
 ];
 
