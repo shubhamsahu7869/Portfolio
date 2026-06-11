@@ -492,10 +492,22 @@ function Projects() {
                     <Github size={16} />
                     GitHub
                   </a>
-                  <a href={project.demo} className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.055] px-4 py-2 text-sm font-semibold transition hover:border-gold/60">
-                    <ExternalLink size={16} />
-                    Live Demo
-                  </a>
+                  {project.demo ? (
+                    <a
+                      href={project.demo}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.055] px-4 py-2 text-sm font-semibold transition hover:border-gold/60"
+                    >
+                      <ExternalLink size={16} />
+                      Live Demo
+                    </a>
+                  ) : (
+                    <span className="inline-flex cursor-not-allowed items-center gap-2 rounded-full border border-white/10 bg-white/[0.035] px-4 py-2 text-sm font-semibold text-zinc-500 dark:text-zinc-400">
+                      <ExternalLink size={16} />
+                      No Live Demo
+                    </span>
+                  )}
                 </div>
               </div>
             </motion.article>

@@ -63,7 +63,7 @@ export const projects = [
     imageTone: "from-gold/25 via-aqua/20 to-violet/20",
     tech: ["MERN Stack", "OpenRouter API", "JWT", "MongoDB", "Tailwind CSS"],
     github: "https://github.com/shubhamsahu7869/PlanMyYatra",
-    demo: "#contact",
+    demo: null,
     highlights: ["AI itinerary generation", "Trip management", "OpenRouter API", "Budget planning"]
   },
   {
@@ -135,7 +135,7 @@ export const projects = [
     imageTone: "from-white/15 via-gold/20 to-aqua/20",
     tech: ["JavaScript", "Web App", "GitHub"],
     github: "https://github.com/shubhamsahu7869/mybookapp",
-    demo: "#contact",
+    demo: null,
     highlights: ["Book app", "Clean interface", "Portfolio project"]
   }
 ];
