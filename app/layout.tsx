@@ -1,10 +1,11 @@
 import type { Metadata, Viewport } from "next";
-import { Inter } from "next/font/google";
+import { Manrope } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({
+const manrope = Manrope({
   subsets: ["latin"],
-  variable: "--font-inter",
+  variable: "--font-manrope",
+  weight: ["400", "500", "600", "700", "800"],
   display: "swap"
 });
 
@@ -44,7 +45,7 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className="dark scroll-smooth">
-      <body className={`${inter.variable} bg-white text-slate-950 antialiased dark:bg-ink dark:text-white`}>
+      <body className={`${manrope.variable} bg-white font-sans text-slate-950 antialiased dark:bg-ink dark:text-white`}>
         {children}
       </body>
     </html>
