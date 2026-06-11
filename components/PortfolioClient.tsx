@@ -314,7 +314,7 @@ function Hero() {
                 </div>
                 <div>
                   <p className="font-display text-2xl font-semibold text-white">{profile.fullName}</p>
-                  <p className="mt-2 text-sm text-zinc-300">ECE Student | Software Developer | AI Enthusiast</p>
+                  <p className="mt-2 text-sm text-zinc-300">ECE Student | Software Developer | Full Stack Developer</p>
                 </div>
               </div>
             </div>

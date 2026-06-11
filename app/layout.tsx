@@ -1,16 +1,10 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, Sora } from "next/font/google";
+import { Sora } from "next/font/google";
 import "./globals.css";
-
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-  display: "swap"
-});
 
 const sora = Sora({
   subsets: ["latin"],
-  variable: "--font-space",
+  variable: "--font-sora",
   weight: ["400", "500", "600", "700", "800"],
   display: "swap"
 });
@@ -51,7 +45,7 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className="dark scroll-smooth">
-      <body className={`${inter.variable} ${sora.variable} bg-white text-slate-950 antialiased dark:bg-ink dark:text-white`}>
+      <body className={`${sora.variable} bg-white text-slate-950 antialiased dark:bg-ink dark:text-white`}>
         {children}
       </body>
     </html>
