@@ -30,6 +30,7 @@ import {
 
 const sectionIds = ["home", "about", "skills", "projects", "experience", "education", "achievements", "contact"];
 const filters = ["All", "MERN", "Frontend", "Full Stack"];
+const gmailComposeUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(profile.email)}`;
 
 function cx(...classes: Array<string | false | null | undefined>) {
   return classes.filter(Boolean).join(" ");
@@ -85,20 +86,20 @@ function CursorGlow() {
       <motion.div
         className="cursor-ring pointer-events-none fixed z-50 hidden rounded-full border border-aqua/55 bg-aqua/[0.035] mix-blend-screen backdrop-blur-[1px] lg:block"
         animate={{
-          x: point.x - (hovering ? 30 : 20),
-          y: point.y - (hovering ? 30 : 20),
-          width: hovering ? 60 : pressed ? 30 : 40,
-          height: hovering ? 60 : pressed ? 30 : 40,
+          x: point.x - (hovering ? 17 : 13),
+          y: point.y - (hovering ? 17 : 13),
+          width: hovering ? 34 : pressed ? 20 : 26,
+          height: hovering ? 34 : pressed ? 20 : 26,
           opacity: point.x > 0 ? 1 : 0
         }}
         transition={{ type: "spring", stiffness: 420, damping: 32, mass: 0.35 }}
       />
       <motion.div
-        className="pointer-events-none fixed z-[51] hidden h-2.5 w-2.5 rounded-full bg-gold shadow-[0_0_22px_rgba(245,199,107,0.72)] lg:block"
+        className="pointer-events-none fixed z-[51] hidden h-2 w-2 rounded-full bg-gold shadow-[0_0_18px_rgba(245,199,107,0.7)] lg:block"
         animate={{
-          x: point.x - 5,
-          y: point.y - 5,
-          scale: pressed ? 0.55 : hovering ? 1.5 : 1,
+          x: point.x - 4,
+          y: point.y - 4,
+          scale: pressed ? 0.65 : hovering ? 1.25 : 1,
           opacity: point.x > 0 ? 1 : 0
         }}
         transition={{ type: "spring", stiffness: 700, damping: 26, mass: 0.22 }}
@@ -273,7 +274,7 @@ function Hero() {
             {[
               { href: profile.github, icon: Github, label: "GitHub" },
               { href: profile.linkedin, icon: Linkedin, label: "LinkedIn" },
-              { href: `mailto:${profile.email}`, icon: Mail, label: "Email" }
+              { href: gmailComposeUrl, icon: Mail, label: "Email" }
             ].map((item) => (
               <a
                 key={item.label}
@@ -313,7 +314,7 @@ function Hero() {
                 </div>
                 <div>
                   <p className="font-display text-2xl font-semibold text-white">{profile.fullName}</p>
-                  <p className="mt-2 text-sm text-zinc-300">ECE Student | MERN Developer | Problem Solver</p>
+                  <p className="mt-2 text-sm text-zinc-300">ECE Student | Software Developer | AI Enthusiast</p>
                 </div>
               </div>
             </div>
@@ -595,7 +596,7 @@ function Contact() {
           <SectionHeading eyebrow="Contact" title="Let’s build something useful." text="Reach out for internships, collaborations, full stack roles, or project discussions." />
           <div className="space-y-3">
             {[
-              { icon: Mail, label: profile.email, href: `mailto:${profile.email}` },
+              { icon: Mail, label: profile.email, href: gmailComposeUrl },
               { icon: Phone, label: profile.phone, href: `tel:${profile.phone.replaceAll(" ", "")}` },
               { icon: Linkedin, label: "LinkedIn", href: profile.linkedin },
               { icon: Github, label: "GitHub", href: profile.github },
